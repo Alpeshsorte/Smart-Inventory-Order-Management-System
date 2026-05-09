@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="navleft">
+        <div id="icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkCJb36MKbYahBlA-qtjdO6O_ZYHP8ZcDmYw&s" alt="">
+
+        </div>
+        <div id="categary">
+            <a href="">dashboard</a>
+            <a href="">products</a>
+            <a href="">orders</a>
+            <a href="">analytis</a>
+
+        </div>
+
+    </div>
+
+    <div id="topnav">
+        <input type="search" id="search" placeholder="Enter the search value">
+        <input type="submit" id="submit">
+        <a href="">noti</a>
+        <a href="">user</a>
+    </div>
+
+    <div id="form">
+
+        <form id="productform">
+
+            <h2>Add Product</h2>
+
+            <input type="text" id="name" placeholder="Enter product name">
+
+            <input type="text" id="brand" placeholder="Enter product brand">
+
+            <input type="text" id="category" placeholder="Enter product category">
+
+            <input type="number" id="price" placeholder="Enter product price">
+
+            <input type="number" id="quantity" placeholder="Enter product quantity">
+
+            <input type="text" id="image" placeholder="Enter product image URL">
+
+            <textarea id="description" placeholder="Enter product description"></textarea>
+
+            <select id="status">
+
+                <option value="Availability">Availability Status</option>
+
+                <option value="In_stock">In Stock</option>
+
+                <option value="Out_of_stock">Out Of Stock</option>
+
+            </select>
+
+            <button type="submit">Add Product</button>
+
+        </form>
+
+    </div>
+    
+    <!-- CARD CONTAINER -->
+<div id="productContainer"></div>
+
+<!-- TABLE -->
+<table border="1" width="100%" id="productTable">
+
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody id="tableBody"></tbody>
+
+</table>
+</body>
+<script src="./products.js"></script>
+</html>

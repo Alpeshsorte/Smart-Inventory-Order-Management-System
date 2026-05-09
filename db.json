@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "name": "alpesh sorte ",
+      "brand": "sorte",
+      "category": "job",
+      "price": "384623",
+      "quantity": "1",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeDEAfOflNLBJDbSYAuBEfIQVpJ0dO_tVpQ&s",
+      "description": "best",
+      "status": "In Stock",
+      "id": "3Zf8mj0WzSY"
+    },
+    {
+      "proname": "tv",
+      "probrand": "sony",
+      "procategary": "electronic",
+      "proprice": "40000",
+      "proquantity": "1",
+      "proimage": "https://5.imimg.com/data5/SELLER/Default/2024/2/391557539/VH/EB/PP/60302794/cozymrcb-500x500.jpg",
+      "prodescription": "sony tv product and desplay very clean",
+      "prostatus": "In_stock",
+      "id": "WF_Adj1-fLI"
+    },
+    {
+      "proname": "mayeur",
+      "probrand": "bbuefdb",
+      "procategary": "we442",
+      "proprice": "22243",
+      "proquantity": "321",
+      "proimage": "https://5.imimg.com/data5/SELLER/Default/2024/2/391557539/VH/EB/PP/60302794/cozymrcb-500x500.jpg",
+      "prodescription": "refweg",
+      "prostatus": "Out_of_stock",
+      "id": "A4qq2rBEA48"
+    },
+    {
+      "proname": "Alpesh Sorte",
+      "probrand": "sorteegw",
+      "procategary": "we",
+      "proprice": "23",
+      "proquantity": "233",
+      "proimage": "g",
+      "prodescription": "rgws",
+      "prostatus": "Out_of_stock",
+      "id": "nZNm1sVqxog"
+    }
+  ],
+  "orders": [
+    {
+      "name": "alpesh",
+      "id": "zlWUfLXiqxU"
+    }
+  ],
+  "categories": [
+    {
+      "name": "alpesh",
+      "id": "f2icOReDEPo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
