@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/fd77f2e235.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -13,10 +14,15 @@
 
         </div>
         <div id="categary">
-            <a href="">dashboard</a>
+            <a href="http://127.0.0.1:5501/dashborad/dashborad.html">dashboard</a>
             <a href="">products</a>
-            <a href="">orders</a>
+            <a href="http://127.0.0.1:5501/orders/orders.html">orders</a>
+            <a href="">Add products</a>
+            <a href="">Add Orders</a>
+            <a href="">Setting</a>
             <a href="">analytis</a>
+            <br>
+            <a href="">Logout</a>
 
         </div>
 
@@ -25,15 +31,61 @@
     <div id="topnav">
         <input type="search" id="search" placeholder="Enter the search value">
         <input type="submit" id="submit">
-        <a href="">noti</a>
-        <a href="">user</a>
+        <a href=""><i class="fa-regular fa-bell"></i>Notification</a>
+        <a href=""><i class="fa-regular fa-user"></i>Login/Signup</a>
+    </div>
+
+    <div id="navbottom">
+        <!-- product search by product name, brand, category  -->
+        <input type="search" id="productsearch" placeholder="Enter the product for search">
+
+
+        <select name="" id="Category">
+            <option value="all Categories">All Categories</option>
+            <option value="mobiles">Mobiles</option>
+            <option value="laptop">Laptop</option>
+            <option value="accessaries">Accessaries</option>
+            <option value="smart_watch">Smart watch</option>
+        </select>
+
+        <select name="" id="price_range">
+            <option value="price">price</option>
+            <option value="₹0-₹5000">₹0-₹5000</option>
+            <option value="₹5000-₹20000">₹5000-₹20000</option>
+            <option value="₹20000+">₹20000+</option>
+        </select>
+
+        <select name="" id="Stock">
+            <option value="select stock">select stock</option>
+            <option value="in_stock">In Stock</option>
+            <option value="low_stock">Low Stock</option>
+            <option value="out_of_stock">Out of Stock</option>
+        </select>
+
+        <select name="" id="brand">
+            <option value="select brand">select brand</option>
+            <option value="samsung">Samsung</option>
+            <option value="apple">Apple</option>
+            <option value="hp">HP</option>
+            <option value="lenovo">Lenovo</option>
+        </select>
+
+        <select name="" id="sorting">
+            <option value="product_sorting">Product Sorting</option>
+            <option value="Price Low to high">Price Low to high</option>
+            <option value="Price high to low">Price high to low</option>
+            <option value="Product Name A-Z">Product Name A-Z</option>
+            <option value="Product Name Z-A">Product Name Z-A</option>
+            <option value="Highest Stock First">Highest Stock First</option>
+            <option value="Newly added products">Newly added products</option>
+        </select>
     </div>
 
     <div id="form">
 
         <form id="productform">
 
-            <h2>Add Product</h2>
+            <!-- <h2>Add Product</h2> -->
 
             <input type="text" id="name" placeholder="Enter product name">
 
@@ -51,7 +103,7 @@
 
             <select id="status">
 
-                <option value="Availability">Availability Status</option>
+                <option disabled value="Availability">Availability Status</option>
 
                 <option value="In_stock">In Stock</option>
 
@@ -66,26 +118,20 @@
     </div>
     
     <!-- CARD CONTAINER -->
-<div id="productContainer"></div>
+    <div id="productContainer"></div>
 
-<!-- TABLE -->
-<table border="1" width="100%" id="productTable">
+    <!-- pagination  -->
+    <div id="pagination">
 
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Status</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-    </thead>
+        <button id="prevBtn">Previous</button>
 
-    <tbody id="tableBody"></tbody>
+        <div id="pageNumbers"></div>
+
+        <button id="nextBtn">Next</button>
+
+    </div>
+
+
 
 </table>
 </body>

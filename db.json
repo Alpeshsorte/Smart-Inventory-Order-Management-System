@@ -1,60 +1,331 @@
 {
   "products": [
     {
-      "name": "alpesh sorte ",
-      "brand": "sorte",
-      "category": "job",
-      "price": "384623",
-      "quantity": "1",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeDEAfOflNLBJDbSYAuBEfIQVpJ0dO_tVpQ&s",
-      "description": "best",
+      "name": "Samsung Galaxy S24",
+      "brand": "Samsung",
+      "category": "Mobile",
+      "price": 74999,
+      "quantity": 23,
+      "imageUrl": "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/303839_rrhtai.png",
+      "description": "Latest Samsung flagship smartphone",
       "status": "In Stock",
-      "id": "3Zf8mj0WzSY"
+      "id": "1"
     },
     {
-      "proname": "tv",
-      "probrand": "sony",
-      "procategary": "electronic",
+      "id": "2",
+      "name": "iPhone 15",
+      "brand": "Apple",
+      "category": "Mobile",
+      "price": 79999,
+      "quantity": 8,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Apple iPhone latest model",
+      "status": "In Stock"
+    },
+    {
+      "id": "3",
+      "name": "OnePlus 12",
+      "brand": "OnePlus",
+      "category": "Mobile",
+      "price": 64999,
+      "quantity": 4,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Flagship OnePlus smartphone",
+      "status": "Low Stock"
+    },
+    {
+      "id": "4",
+      "name": "Redmi Note 13",
+      "brand": "Xiaomi",
+      "category": "Mobile",
+      "price": 18999,
+      "quantity": 20,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Budget gaming smartphone",
+      "status": "In Stock"
+    },
+    {
+      "id": "5",
+      "name": "Realme Narzo 70",
+      "brand": "Realme",
+      "category": "Mobile",
+      "price": 15999,
+      "quantity": 0,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Affordable Realme smartphone",
+      "status": "Out of Stock"
+    },
+    {
+      "id": "7",
+      "name": "Dell Inspiron 15",
+      "brand": "Dell",
+      "category": "Laptop",
+      "price": 55999,
+      "quantity": 10,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Dell everyday performance laptop",
+      "status": "In Stock"
+    },
+    {
+      "id": "8",
+      "name": "HP Pavilion x360",
+      "brand": "HP",
+      "category": "Laptop",
+      "price": 67999,
+      "quantity": 6,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Convertible touchscreen laptop",
+      "status": "In Stock"
+    },
+    {
+      "id": "9",
+      "name": "Lenovo IdeaPad Slim 5",
+      "brand": "Lenovo",
+      "category": "Laptop",
+      "price": 48999,
+      "quantity": 2,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Slim and lightweight laptop",
+      "status": "Low Stock"
+    },
+    {
+      "id": "10",
+      "name": "Asus ROG Strix",
+      "brand": "Asus",
+      "category": "Laptop",
+      "price": 129999,
+      "quantity": 5,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "High-end gaming laptop",
+      "status": "In Stock"
+    },
+    {
+      "id": "11",
+      "name": "Boat Rockerz 450",
+      "brand": "Boat",
+      "category": "Accessories",
+      "price": 1499,
+      "quantity": 40,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Wireless Bluetooth headphones",
+      "status": "In Stock"
+    },
+    {
+      "id": "12",
+      "name": "Sony WH-1000XM5",
+      "brand": "Sony",
+      "category": "Accessories",
+      "price": 24999,
+      "quantity": 7,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Premium noise cancelling headphones",
+      "status": "In Stock"
+    },
+    {
+      "id": "13",
+      "name": "Logitech G102 Mouse",
+      "brand": "Logitech",
+      "category": "Accessories",
+      "price": 1299,
+      "quantity": 25,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Gaming wired mouse",
+      "status": "In Stock"
+    },
+    {
+      "id": "14",
+      "name": "HP Wireless Keyboard",
+      "brand": "HP",
+      "category": "Accessories",
+      "price": 1899,
+      "quantity": 12,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Compact wireless keyboard",
+      "status": "In Stock"
+    },
+    {
+      "id": "15",
+      "name": "Mi Power Bank 20000mAh",
+      "brand": "Xiaomi",
+      "category": "Accessories",
+      "price": 2199,
+      "quantity": 18,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Fast charging power bank",
+      "status": "In Stock"
+    },
+    {
+      "id": "16",
+      "name": "Apple Watch Series 9",
+      "brand": "Apple",
+      "category": "Smart Watch",
+      "price": 42999,
+      "quantity": 4,
+      "imageUrl": "https://via.placeholder.com/150",
+      "description": "Advanced Apple smartwatch",
+      "status": "Low Stock"
+    },
+    {
+      "proname": "asus laptop",
+      "probrand": "asus",
+      "procategary": "laptop",
       "proprice": "40000",
-      "proquantity": "1",
-      "proimage": "https://5.imimg.com/data5/SELLER/Default/2024/2/391557539/VH/EB/PP/60302794/cozymrcb-500x500.jpg",
-      "prodescription": "sony tv product and desplay very clean",
+      "proquantity": "32",
+      "proimage": "https://media.istockphoto.com/id/2152858376/photo/asus-laptop-14-f415jf-ek156t.jpg?s=612x612&w=0&k=20&c=Xc2Slky2AoKvyr4R6VA7y5Smu5hYwH9HjE000CgTyNs=",
+      "prodescription": "new laptop in asus series",
       "prostatus": "In_stock",
-      "id": "WF_Adj1-fLI"
+      "id": "Hfkz6CMQr_M"
     },
     {
-      "proname": "mayeur",
-      "probrand": "bbuefdb",
-      "procategary": "we442",
-      "proprice": "22243",
-      "proquantity": "321",
-      "proimage": "https://5.imimg.com/data5/SELLER/Default/2024/2/391557539/VH/EB/PP/60302794/cozymrcb-500x500.jpg",
-      "prodescription": "refweg",
-      "prostatus": "Out_of_stock",
-      "id": "A4qq2rBEA48"
-    },
-    {
-      "proname": "Alpesh Sorte",
-      "probrand": "sorteegw",
-      "procategary": "we",
-      "proprice": "23",
-      "proquantity": "233",
-      "proimage": "g",
-      "prodescription": "rgws",
-      "prostatus": "Out_of_stock",
-      "id": "nZNm1sVqxog"
+      "proname": "HP Pavilion x360",
+      "probrand": "HP",
+      "procategary": "Laptop",
+      "proprice": "67999",
+      "proquantity": "7",
+      "proimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnkfEq_S3pDz6ImnpbF9Ogv9nuRgGSHMRUA&s",
+      "prodescription": "Convertible touchscreen laptop",
+      "prostatus": "In_stock",
+      "id": "N7j4LpWxm4w"
     }
   ],
   "orders": [
     {
-      "name": "alpesh",
-      "id": "zlWUfLXiqxU"
+      "id": "1",
+      "customerName": "Rahul Sharma",
+      "mobile": "9876543210",
+      "product": "Samsung Galaxy S24",
+      "quantity": 1,
+      "totalAmount": 74999,
+      "address": "Nagpur, Maharashtra",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "createdAt": "2025-05-01"
+    },
+    {
+      "id": "2",
+      "customerName": "Priya Verma",
+      "mobile": "9876501234",
+      "product": "iPhone 15",
+      "quantity": 1,
+      "totalAmount": 79999,
+      "address": "Pune, Maharashtra",
+      "paymentStatus": "Paid",
+      "orderStatus": "Shipped",
+      "createdAt": "2025-05-02"
+    },
+    {
+      "id": "3",
+      "customerName": "Amit Joshi",
+      "mobile": "9988776655",
+      "product": "Dell Inspiron 15",
+      "quantity": 2,
+      "totalAmount": 111998,
+      "address": "Mumbai, Maharashtra",
+      "paymentStatus": "Pending",
+      "orderStatus": "Processing",
+      "createdAt": "2025-05-03"
+    },
+    {
+      "id": "4",
+      "customerName": "Sneha Patil",
+      "mobile": "9123456789",
+      "product": "Boat Rockerz 450",
+      "quantity": 3,
+      "totalAmount": 4497,
+      "address": "Nagpur, Maharashtra",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "createdAt": "2025-05-04"
+    },
+    {
+      "id": "5",
+      "customerName": "Karan Mehta",
+      "mobile": "9001122334",
+      "product": "Apple Watch Series 9",
+      "quantity": 1,
+      "totalAmount": 42999,
+      "address": "Delhi",
+      "paymentStatus": "Paid",
+      "orderStatus": "Processing",
+      "createdAt": "2025-05-05"
+    },
+    {
+      "id": "6",
+      "customerName": "Rohit Kale",
+      "mobile": "9011223344",
+      "product": "Asus ROG Strix",
+      "quantity": 1,
+      "totalAmount": 129999,
+      "address": "Hyderabad",
+      "paymentStatus": "Pending",
+      "orderStatus": "Pending",
+      "createdAt": "2025-05-06"
+    },
+    {
+      "id": "7",
+      "customerName": "Pooja Singh",
+      "mobile": "9988123456",
+      "product": "Noise ColorFit Pro",
+      "quantity": 2,
+      "totalAmount": 6998,
+      "address": "Bhopal",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "createdAt": "2025-05-07"
+    },
+    {
+      "id": "8",
+      "customerName": "Vikas Jain",
+      "mobile": "9871234567",
+      "product": "Sony WH-1000XM5",
+      "quantity": 1,
+      "totalAmount": 24999,
+      "address": "Jaipur",
+      "paymentStatus": "Paid",
+      "orderStatus": "Shipped",
+      "createdAt": "2025-05-08"
+    },
+    {
+      "id": "9",
+      "customerName": "Neha Kapoor",
+      "mobile": "9765432101",
+      "product": "Lenovo IdeaPad Slim 5",
+      "quantity": 1,
+      "totalAmount": 48999,
+      "address": "Chennai",
+      "paymentStatus": "Pending",
+      "orderStatus": "Processing",
+      "createdAt": "2025-05-09"
+    },
+    {
+      "id": "10",
+      "customerName": "Arjun Deshmukh",
+      "mobile": "9090909090",
+      "product": "Samsung Galaxy Watch 6",
+      "quantity": 1,
+      "totalAmount": 28999,
+      "address": "Nagpur",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "createdAt": "2025-05-10"
     }
   ],
   "categories": [
     {
-      "name": "alpesh",
-      "id": "f2icOReDEPo"
+      "id": "1",
+      "name": "Mobile"
+    },
+    {
+      "id": "2",
+      "name": "Laptop"
+    },
+    {
+      "id": "3",
+      "name": "Accessories"
+    },
+    {
+      "id": "4",
+      "name": "Smart Watch"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

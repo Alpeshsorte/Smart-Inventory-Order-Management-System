@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f1f5f9;
+    padding: 20px;
+}
+
+/* HEADING */
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+/* TOP NAV */
+
+#top_nav{
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    margin-bottom: 30px;
+}
+
+/* SEARCH + SELECT */
+
+#top_nav input,
+#top_nav select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    min-width: 220px;
+}
+
+/* ORDER FORM */
+
+#orderForm{
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FORM INPUTS */
+
+#orderForm input,
+#orderForm select,
+#orderForm textarea{
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+/* TEXTAREA */
+
+#orderForm textarea{
+    resize: none;
+    height: 90px;
+    grid-column: span 2;
+}
+
+/* BUTTON */
+
+#orderForm button{
+    grid-column: span 2;
+
+    padding: 12px;
+
+    border: none;
+
+    background-color: #0ea5e9;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#orderForm button:hover{
+    background-color: #0284c7;
+}
+
+/* ORDER CONTAINER */
+
+#orderContainer{
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+}
+
+/* CARD */
+
+.card{
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.card p{
+    margin-top: 8px;
+    color: #475569;
+}
+
+/* BUTTON BOX */
+
+.btnBox{
+    margin-top: 15px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+/* CARD BUTTONS */
+
+.btnBox button{
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.editBtn{
+    background-color: orange;
+}
+
+.deleteBtn{
+    background-color: crimson;
+}
+
+/* PAGINATION */
+
+#orderPagination{
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+/* PAGINATION BUTTONS */
+
+#orderPagination button{
+    padding: 10px 15px;
+
+    border: none;
+
+    background-color: #0ea5e9;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#orderPagination button:hover{
+    background-color: #0284c7;
+}
+
+/* PAGE NUMBERS */
+
+#orderPageNumbers{
+    display: flex;
+    gap: 8px;
+}
+
+.pageBtn{
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+/* ACTIVE PAGE */
+
+.activePage{
+    background-color: #0f172a;
+    color: white;
+}

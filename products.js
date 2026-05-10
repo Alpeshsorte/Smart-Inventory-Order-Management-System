@@ -3,7 +3,7 @@ productform.addEventListener("submit", getproductdata)
 
 function getproductdata(){
     event.preventDefault()
-    let proname=productform.name.value
+    let proname = productform.name.value
     let probrand=productform.brand.value
     let procategary=productform.category.value
     let proprice=productform.price.value
@@ -17,7 +17,7 @@ function getproductdata(){
     }
     product_post(obj)
 
-    productform.rest()
+    productform.reset()
 }
 
 async function product_post(data) {
@@ -30,12 +30,18 @@ async function product_post(data) {
                 "Content-Type":"application/json"
             }
         })
+
+        getproduct()
+
+
     }catch(error){
         console.log("somting is very worng");
         
     }
     
 }
+
+// let productContainer=document.getElementById("ProductContainer")
 
 
 async function getproduct() {
@@ -44,9 +50,9 @@ async function getproduct() {
         let response=await fetch(`http://localhost:3000/products`)
         let res=await response.json()
 
-        displaycards(res)
+        displayCards(res)
 
-        displayteble(res)
+        // displayteble(res)
     }catch(error){
         console.log("error in the getproduct");
         
@@ -63,7 +69,7 @@ function displayCards(arr){
 
     container.innerHTML = ""
 
-    data.forEach((el)=>{
+    arr.forEach((el)=>{
 
         let card = document.createElement("div")
 
@@ -75,11 +81,11 @@ function displayCards(arr){
 
         let name = document.createElement("h2")
 
-        name.textContent = el.proname
+        name.textContent = `Name: ${el.proname}`
 
         let brand = document.createElement("h3")
 
-        brand.textContent = "Brand : " + el.probrand
+        brand.textContent = `Brand : ${ el.probrand}`
 
 
         let category = document.createElement("h3")
@@ -108,7 +114,7 @@ function displayCards(arr){
 
 
         let editBtn = document.createElement("button")
-
+        // editBtn.style.backgroundColor=black;
         editBtn.textContent = "Edit"
 
 

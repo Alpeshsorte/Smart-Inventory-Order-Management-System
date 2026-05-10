@@ -3,10 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Analytics</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+
 </head>
 <body>
-    
+
+    <!-- DASHBOARD TITLE -->
+
+    <h1>Admin Dashboard</h1>
+
+
+    <!-- DASHBOARD CONTAINER -->
+
+    <div id="dashboardContainer">
+
+        <!-- TOTAL PRODUCTS -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-box"></i>
+
+            <h2>Total Products</h2>
+
+            <h1 id="totalProducts">0</h1>
+
+        </div>
+
+
+        <!-- TOTAL ORDERS -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h2>Total Orders</h2>
+
+            <h1 id="totalOrders">0</h1>
+
+        </div>
+
+
+        <!-- TOTAL REVENUE -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            <h2>Total Revenue</h2>
+
+            <h1 id="totalRevenue">₹0</h1>
+
+        </div>
+
+
+        <!-- AVAILABLE STOCK -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-warehouse"></i>
+
+            <h2>Available Stock</h2>
+
+            <h1 id="availableStock">0</h1>
+
+        </div>
+
+
+        <!-- OUT OF STOCK -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            <h2>Out Of Stock</h2>
+
+            <h1 id="outOfStock">0</h1>
+
+        </div>
+
+
+        <!-- PENDING DELIVERIES -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-truck"></i>
+
+            <h2>Pending Deliveries</h2>
+
+            <h1 id="pendingDeliveries">0</h1>
+
+        </div>
+
+
+        <!-- CANCELLED ORDERS -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-ban"></i>
+
+            <h2>Cancelled Orders</h2>
+
+            <h1 id="cancelledOrders">0</h1>
+
+        </div>
+
+    </div>
+
 </body>
 <script src="./dashboard.js"></script>
 </html>

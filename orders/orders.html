@@ -4,8 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+     <h1>Customer Order Management</h1>
+    
+       <div id="top_nav">
+            <!-- order search by customer name, orderid, payment status  -->
+            <input type="text" id="order_search" placeholder="Enter customer details for search">
+
+            <select name="" id="order_filter">
+                <option value="pending">Pending Orders</option>
+                <option value="deliverd">Deliverd Orders</option>
+                <option value="cancelled">Cancelled Orders</option>
+                <option value="paid_unpaid">Paid/ Unpaid Orders</option>
+            </select>
+
+
+            <select name="" id="order_sorting">
+                <option value="latest">Latest Orders</option>
+                <option value="oldest">Oldest Orders </option>
+                <option value="highest">Highest Bill Amount </option>
+                <option value="order">Order Status </option>
+            </select>
+       </div>
+
+    <!-- ORDER FORM -->
+
+    <form id="orderForm">
+
+        <input type="text" id="customerName" placeholder="Customer Name">
+
+        <input type="number" id="mobileNumber" placeholder="Mobile Number">
+
+        <input type="text" id="productPurchased" placeholder="Product Purchased">
+
+        <input type="number" id="quantityOrdered" placeholder="Quantity Ordered">
+
+        <input type="number" id="totalAmount" placeholder="Total Amount">
+
+        <select id="paymentStatus">
+            <option value="">Select Payment Status</option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+        </select>
+
+        <select id="orderStatus">
+            <option value="">Select Order Status</option>
+            <option value="Processing">Processing</option>
+            <option value="Shipped">Shipped</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Cancelled">Cancelled</option>
+        </select>
+
+        <textarea id="deliveryAddress"
+        placeholder="Delivery Address"></textarea>
+
+        <button type="submit">
+            <i class="fa-solid fa-plus"></i>
+            Add Order
+        </button>
+
+    </form>
+
+    <!-- DISPLAY ORDERS -->
+     <!-- display card also in this div  -->
+
+    <div id="orderContainer"></div>
+
+    <!-- pagination  -->
+    <div id="orderPagination">
+
+        <button id="orderPrevBtn">Previous</button>
+
+        <div id="orderPageNumbers"></div>
+
+        <button id="orderNextBtn">Next</button>
+
+    </div>
+
     
 </body>
 <script src="./orders.js"></script>
