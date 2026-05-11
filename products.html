@@ -8,36 +8,18 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="navleft">
-        <div id="icon">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkCJb36MKbYahBlA-qtjdO6O_ZYHP8ZcDmYw&s" alt="">
 
-        </div>
-        <div id="categary">
-            <a href="http://127.0.0.1:5501/dashborad/dashborad.html">dashboard</a>
-            <a href="">products</a>
-            <a href="http://127.0.0.1:5501/orders/orders.html">orders</a>
-            <a href="">Add products</a>
-            <a href="">Add Orders</a>
-            <a href="">Setting</a>
-            <a href="">analytis</a>
-            <br>
-            <a href="">Logout</a>
-
-        </div>
-
-    </div>
-
-    <div id="topnav">
+    <!-- <div id="topnav">
         <input type="search" id="search" placeholder="Enter the search value">
         <input type="submit" id="submit">
         <a href=""><i class="fa-regular fa-bell"></i>Notification</a>
         <a href=""><i class="fa-regular fa-user"></i>Login/Signup</a>
-    </div>
+    </div> -->
 
     <div id="navbottom">
         <!-- product search by product name, brand, category  -->
-        <input type="search" id="productsearch" placeholder="Enter the product for search">
+        <input type="search" id="productsearch" placeholder="Enter product for search">
+        <input type="submit" id="pro_serch">
 
 
         <select name="" id="Category">
@@ -82,38 +64,61 @@
     </div>
 
     <div id="form">
-
+            
         <form id="productform">
-
             <!-- <h2>Add Product</h2> -->
-
             <input type="text" id="name" placeholder="Enter product name">
-
             <input type="text" id="brand" placeholder="Enter product brand">
-
             <input type="text" id="category" placeholder="Enter product category">
-
             <input type="number" id="price" placeholder="Enter product price">
-
             <input type="number" id="quantity" placeholder="Enter product quantity">
-
             <input type="text" id="image" placeholder="Enter product image URL">
-
             <textarea id="description" placeholder="Enter product description"></textarea>
-
             <select id="status">
-
                 <option disabled value="Availability">Availability Status</option>
-
                 <option value="In_stock">In Stock</option>
-
                 <option value="Out_of_stock">Out Of Stock</option>
-
             </select>
-
             <button type="submit">Add Product</button>
-
         </form>
+
+        <!-- <div id="update_id">
+            <input type="text" id="user_id" placeholder="Enter the the id for update">
+            <button onclick="getuserdata()">click to get data</button>
+        </div> -->
+
+            <form id="productupdate">
+
+                <!-- <input type="text" id="product_id" placeholder="Enter the the id for update">
+                <button onclick="getproductdata()">click to get product data</button> -->
+
+                <input type="text" id="product_id" placeholder="Enter product id">
+
+                <input type="text" id="update_name" placeholder="Enter name">
+
+                <input type="text" id="update_brand" placeholder="Enter brand">
+
+                <input type="text" id="update_category" placeholder="Enter category">
+
+                <input type="number" id="update_price" placeholder="Enter price">
+
+                <input type="number" id="update_quantity" placeholder="Enter quantity">
+
+                <input type="text" id="update_image" placeholder="Enter image URL">
+
+                <textarea id="update_description" placeholder="Enter description"></textarea>
+
+                <select id="update_status">
+
+                    <option value="In_stock">In Stock</option>
+
+                    <option value="Out_of_stock">Out Of Stock</option>
+
+                </select>
+
+                <button type="submit">Update Product</button>
+
+            </form>
 
     </div>
     
@@ -125,12 +130,18 @@
 
         <button id="prevBtn">Previous</button>
 
-        <div id="pageNumbers"></div>
+        <div id="pageNumbers">
+            <button>1</button></div>
+         <div id="pageNumbers">
+            <button>2</button></div>
+          <div id="pageNumbers">
+            <button>3</button></div>
 
         <button id="nextBtn">Next</button>
 
     </div>
 
+    
 
 
 </table>

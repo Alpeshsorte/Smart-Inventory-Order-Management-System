@@ -1,37 +1,37 @@
 {
   "products": [
     {
-      "name": "Samsung Galaxy S24",
-      "brand": "Samsung",
-      "category": "Mobile",
-      "price": 74999,
-      "quantity": 23,
-      "imageUrl": "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/303839_rrhtai.png",
-      "description": "Latest Samsung flagship smartphone",
-      "status": "In Stock",
+      "name": "mobile",
+      "brand": "sumsung",
+      "category": "bbas",
+      "price": "20000",
+      "quantity": "34",
+      "image": "https://s3bg.cashify.in/gpro/uploads/2019/07/14164950/xiaomi-mi-a3-back.png",
+      "description": "best moblie 2026",
+      "status": "In_stock",
       "id": "1"
     },
     {
-      "id": "2",
       "name": "iPhone 15",
       "brand": "Apple",
       "category": "Mobile",
-      "price": 79999,
-      "quantity": 8,
-      "imageUrl": "https://via.placeholder.com/150",
+      "price": "79999",
+      "quantity": "8",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStGUSahbLgsZgDLaqGF2YmZt9ySTcdQ0TWAA&s",
       "description": "Apple iPhone latest model",
-      "status": "In Stock"
+      "status": "In_stock",
+      "id": "2"
     },
     {
-      "id": "3",
       "name": "OnePlus 12",
       "brand": "OnePlus",
       "category": "Mobile",
-      "price": 64999,
-      "quantity": 4,
-      "imageUrl": "https://via.placeholder.com/150",
+      "price": "64999",
+      "quantity": "4",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Cjm_XAM_JYfCIpH0TlJ8QWdwUZMdcvuzNw&s",
       "description": "Flagship OnePlus smartphone",
-      "status": "Low Stock"
+      "status": "",
+      "id": "3"
     },
     {
       "id": "4",
@@ -186,6 +186,28 @@
       "prodescription": "Convertible touchscreen laptop",
       "prostatus": "In_stock",
       "id": "N7j4LpWxm4w"
+    },
+    {
+      "proname": "watch",
+      "probrand": "bolt",
+      "procategary": "smart watch",
+      "proprice": "1005",
+      "proquantity": "5",
+      "proimage": "https://img.clevup.in/278008/1691235493459_SKU-0899_2.jpg?width=600&format=webp",
+      "prodescription": "smart watch at cep cost",
+      "prostatus": "In_stock",
+      "id": "MEQdn6ddVTQ"
+    },
+    {
+      "proname": "Mobile",
+      "probrand": "MI",
+      "procategary": "electronic",
+      "proprice": "20000",
+      "proquantity": "23",
+      "proimage": "https://i03.appmifile.com/703_item_in/04/01/2024/a33bb7ee0b332c4d60c9b680de6c9891.jpg?thumb=1&w=500&q=85",
+      "prodescription": "chiper  price and comfort",
+      "prostatus": "In_stock",
+      "id": "X5xYwyRz8vA"
     }
   ],
   "orders": [
