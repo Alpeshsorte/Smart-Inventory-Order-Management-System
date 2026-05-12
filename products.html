@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
     <!-- <div id="topnav">
         <input type="search" id="search" placeholder="Enter the search value">
         <input type="submit" id="submit">
@@ -18,8 +17,14 @@
 
     <div id="navbottom">
         <!-- product search by product name, brand, category  -->
+         <select name="" id="type">
+            <option value="">search by value</option>
+            <option value="name">Product Name</option>
+            <option value="brand">Brand</option>
+            <option value="category">Category</option>
+         </select>
         <input type="search" id="productsearch" placeholder="Enter product for search">
-        <input type="submit" id="pro_serch">
+        <input type="submit" id="search_Btn">
 
 
         <select name="" id="Category">
@@ -32,7 +37,7 @@
 
         <select name="" id="price_range">
             <option value="price">price</option>
-            <option value="₹0-₹5000">₹0-₹5000</option>
+            <option value="price=desc">₹0-₹5000</option>
             <option value="₹5000-₹20000">₹5000-₹20000</option>
             <option value="₹20000+">₹20000+</option>
         </select>
@@ -52,16 +57,23 @@
             <option value="lenovo">Lenovo</option>
         </select>
 
-        <select name="" id="sorting">
-            <option value="product_sorting">Product Sorting</option>
-            <option value="Price Low to high">Price Low to high</option>
-            <option value="Price high to low">Price high to low</option>
-            <option value="Product Name A-Z">Product Name A-Z</option>
-            <option value="Product Name Z-A">Product Name Z-A</option>
-            <option value="Highest Stock First">Highest Stock First</option>
-            <option value="Newly added products">Newly added products</option>
+        <select id="sorting">
+
+            <option value="">Product Sorting</option>
+
+            <option value="price-asc">Price Low to High</option>
+
+            <option value="price-desc">Price High to Low</option>
+
+            <option value="name-asc">Product Name A-Z</option>
+
+            <option value="name-desc">Product Name Z-A</option>
+
         </select>
     </div>
+
+    <!-- mapdata for search, filter, sort  -->
+     <!-- <div id="container"></div> -->
 
     <div id="form">
             
@@ -123,23 +135,24 @@
     </div>
     
     <!-- CARD CONTAINER -->
-    <div id="productContainer"></div>
+    <div id="productContainer">
+
+
+    </div>
 
     <!-- pagination  -->
     <div id="pagination">
 
         <button id="prevBtn">Previous</button>
 
-        <div id="pageNumbers">
-            <button>1</button></div>
-         <div id="pageNumbers">
-            <button>2</button></div>
-          <div id="pageNumbers">
-            <button>3</button></div>
+        <div id="pageNumbers"></div>
 
         <button id="nextBtn">Next</button>
 
     </div>
+
+</div>
+</div>
 
     
 

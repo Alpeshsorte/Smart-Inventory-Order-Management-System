@@ -5,12 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html,
 body{
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     background-color: #f1f5f9;
     padding: 20px;
 }
@@ -19,61 +14,64 @@ body{
 
 h1{
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #0f172a;
 }
 
 /* TOP NAV */
 
 #top_nav{
-    width: 100%;
-    background-color: white;
+    background-color: rgb(150, 219, 89);
+
+    padding: 15px;
 
     display: flex;
-    align-items: center;
-    gap: 15px;
+
+    gap: 10px;
+
     flex-wrap: wrap;
 
-    padding: 20px;
+    border-radius: 8px;
 
-    border-radius: 10px;
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* SEARCH + SELECT */
 
 #top_nav input,
 #top_nav select{
-    padding: 12px;
+    padding: 10px;
+
     border: 1px solid #ccc;
+
     border-radius: 5px;
-    outline: none;
-    min-width: 220px;
+
+    flex: 1;
 }
 
-/* ORDER FORM */
+/* FORM */
+
+#or_form{
+    width: 540px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
 
 #orderForm{
-    width: 100%;
-    max-width: 850px;
-
-    margin: auto;
-
     background-color: white;
 
-    padding: 25px;
-
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 8px;
 
     display: grid;
+
     grid-template-columns: repeat(2,1fr);
 
     gap: 15px;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
 }
 
 /* FORM INPUTS */
@@ -81,7 +79,7 @@ h1{
 #orderForm input,
 #orderForm select,
 #orderForm textarea{
-    padding: 12px;
+    padding: 10px;
 
     border: 1px solid #ccc;
 
@@ -93,9 +91,11 @@ h1{
 /* TEXTAREA */
 
 #orderForm textarea{
-    resize: none;
-    height: 90px;
     grid-column: span 2;
+
+    height: 80px;
+
+    resize: none;
 }
 
 /* BUTTON */
@@ -114,19 +114,77 @@ h1{
     border-radius: 5px;
 
     cursor: pointer;
-
-    font-size: 16px;
 }
 
 #orderForm button:hover{
     background-color: #0284c7;
 }
 
+
+
+#updateForm{
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 8px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+/* FORM INPUTS */
+
+#orderForm input,
+#orderForm select,
+#orderForm textarea{
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+/* TEXTAREA */
+
+#orderForm textarea{
+    grid-column: span 2;
+
+    height: 80px;
+
+    resize: none;
+}
+
+/* BUTTON */
+
+#orderForm button{
+    grid-column: span 2;
+
+    padding: 12px;
+
+    border: none;
+
+    background-color: #0ea5e9;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+#orderForm button:hover{
+    background-color: #0284c7;
+}
 /* ORDER CONTAINER */
 
 #orderContainer{
-    margin-top: 35px;
-
     display: grid;
 
     grid-template-columns: repeat(3,1fr);
@@ -139,27 +197,25 @@ h1{
 .card{
     background-color: white;
 
-    padding: 20px;
+    padding: 15px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .card h2{
-    margin-bottom: 12px;
-    color: #0f172a;
+    margin-bottom: 10px;
 }
 
 .card p{
-    margin-top: 8px;
-    color: #475569;
+    margin: 5px 0;
 }
 
 /* BUTTON BOX */
 
 .btnBox{
-    margin-top: 15px;
+    margin-top: 10px;
 
     display: flex;
 
@@ -168,16 +224,17 @@ h1{
 
 /* CARD BUTTONS */
 
-.btnBox button{
+.editBtn,
+.deleteBtn{
     flex: 1;
 
     padding: 10px;
 
     border: none;
 
-    border-radius: 5px;
-
     color: white;
+
+    border-radius: 5px;
 
     cursor: pointer;
 }
@@ -193,7 +250,7 @@ h1{
 /* PAGINATION */
 
 #orderPagination{
-    margin-top: 35px;
+    margin-top: 25px;
 
     display: flex;
 
@@ -220,35 +277,28 @@ h1{
     cursor: pointer;
 }
 
-#orderPagination button:hover{
-    background-color: #0284c7;
-}
-
 /* PAGE NUMBERS */
 
 #orderPageNumbers{
     display: flex;
+
     gap: 8px;
 }
 
-.pageBtn{
-    width: 40px;
-    height: 40px;
+/* RESPONSIVE */
 
-    border: 1px solid #ccc;
+@media(max-width:768px){
 
-    background-color: white;
+    #orderForm{
+        grid-template-columns: 1fr;
+    }
 
-    border-radius: 5px;
+    #orderForm textarea,
+    #orderForm button{
+        grid-column: span 1;
+    }
 
-    cursor: pointer;
-
-    font-weight: bold;
-}
-
-/* ACTIVE PAGE */
-
-.activePage{
-    background-color: #0f172a;
-    color: white;
+    #orderContainer{
+        grid-template-columns: 1fr;
+    }
 }
