@@ -11,13 +11,21 @@
     
        <div id="top_nav">
             <!-- order search by customer name, orderid, payment status  -->
+            <select name="" id="search">
+                <option value="all">select</option>
+                <option value="customer name">Customer Name</option>
+                <option value="order id">Order ID</option>
+                <option value="payment status">Payment Status</option>
+            </select>
             <input type="text" id="order_search" placeholder="Enter customer details for search">
+            <input type="submit" id="searchBtn">
 
             <select name="" id="order_filter">
                 <option value="pending">Pending Orders</option>
                 <option value="deliverd">Deliverd Orders</option>
                 <option value="cancelled">Cancelled Orders</option>
-                <option value="paid_unpaid">Paid/ Unpaid Orders</option>
+                <option value="paid">Paid Orders</option>
+                <option value="unpaid">Un Paid Orders</option>
             </select>
 
 
@@ -34,20 +42,15 @@
 <div id="or_form">
 
     <form id="orderForm">
-
         <input type="text" id="customerName" placeholder="Customer Name">
-
         <input type="number" id="mobileNumber" placeholder="Mobile Number">
-
         <input type="text" id="productPurchased" placeholder="Product Purchased">
-
         <input type="number" id="quantityOrdered" placeholder="Quantity Ordered">
-
         <input type="number" id="totalAmount" placeholder="Total Amount">
-
         <select id="paymentStatus">
             <option value="">Select Payment Status</option>
             <option value="Paid">Paid</option>
+            <option value="un Paid">un Paid</option>
             <option value="Pending">Pending</option>
         </select>
 
@@ -68,24 +71,18 @@
         </button>
 
     </form>
-
-
-
-      <form id="updateForm">
-
+       <!-- update form  -->
+    <form id="updateForm">
         <input type="text" id="customerName" placeholder="Customer Name">
-
         <input type="number" id="mobileNumber" placeholder="Mobile Number">
-
         <input type="text" id="productPurchased" placeholder="Product Purchased">
-
         <input type="number" id="quantityOrdered" placeholder="Quantity Ordered">
-
         <input type="number" id="totalAmount" placeholder="Total Amount">
 
         <select id="paymentStatus">
             <option value="">Select Payment Status</option>
             <option value="Paid">Paid</option>
+            <option value="unPaid">Un Paid</option>
             <option value="Pending">Pending</option>
         </select>
 
@@ -102,17 +99,36 @@
 
         <button type="submit">
             <i class="fa-solid fa-plus"></i>
-            Add Order
+            Order Update
         </button>
 
     </form>
+
 </div>
 
-    <!-- DISPLAY ORDERS -->
-     <!-- display card also in this div  -->
-
-    <div id="orderContainer"></div>
-
+    <div id="order_table">
+        <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>customerName</th>
+                <th>mobile</th>
+                <th>product</th>
+                <th>quantity</th>
+                <th>totalAmount</th>
+                <th>address</th>
+                <th>paymentStatus</th>
+                <th>orderStatus</th>
+                <th>createdAt</th>
+                <th>status</th>
+                <th>action</th>
+                </tr>
+            </thead>
+        <tbody id="orderTableBody"></tbody>
+        </table>
+    <div id="emptyMsg"><p>No orders found.</p></div>
+  </div>
+  
     <!-- pagination  -->
     <div id="orderPagination">
 
