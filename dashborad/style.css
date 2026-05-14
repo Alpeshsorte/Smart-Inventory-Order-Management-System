@@ -14,18 +14,13 @@ body{
     position: fixed;
     top: 0;
     left: 230px;
-
     width: calc(100% - 230px);
-
     background-color: #57af13;
-
     padding: 15px 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
     z-index: 1000;
     border-radius: 10px;
 }
@@ -116,12 +111,9 @@ h1{
 #dashboardContainer{
     margin-left: 250px;
     margin-right: 30px;
-
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
     gap: 25px;
-
     padding: 20px;
 }
 
@@ -130,11 +122,8 @@ h1{
 .card{
     background-color: white;
     padding: 30px;
-
     border-radius: 15px;
-
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-
     text-align: center;
 }
 /* HOVER */
@@ -147,9 +136,7 @@ h1{
 
 .card i{
     font-size: 40px;
-
     color: #0ea5e9;
-
     margin-bottom: 15px;
 }
 
@@ -157,9 +144,7 @@ h1{
 
 .card h2{
     color: #334155;
-
     margin-bottom: 15px;
-
     font-size: 22px;
 }
 
@@ -167,6 +152,5 @@ h1{
 
 .card h1{
     color: #0f172a;
-
     font-size: 35px;
 }

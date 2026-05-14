@@ -20,16 +20,17 @@
             <input type="text" id="order_search" placeholder="Enter customer details for search">
             <input type="submit" id="searchBtn">
 
-            <select name="" id="order_filter">
-                <option value="pending">Pending Orders</option>
-                <option value="deliverd">Deliverd Orders</option>
-                <option value="cancelled">Cancelled Orders</option>
-                <option value="paid">Paid Orders</option>
-                <option value="unpaid">Un Paid Orders</option>
+            <select id="order_filter">              
+                <option value="all">All Orders</option>
+                <option value="Pending">Pending Orders</option>
+                <option value="Delivered">Delivered Orders</option>
+                <option value="Cancelled">Cancelled Orders</option>
+                <option value="Paid">Paid Orders</option>
             </select>
 
 
             <select name="" id="order_sorting">
+                <option value="all">All orders</option>
                 <option value="latest">Latest Orders</option>
                 <option value="oldest">Oldest Orders </option>
                 <option value="highest">Highest Bill Amount </option>
@@ -72,36 +73,32 @@
 
     </form>
        <!-- update form  -->
+
     <form id="updateForm">
-        <input type="text" id="customerName" placeholder="Customer Name">
-        <input type="number" id="mobileNumber" placeholder="Mobile Number">
-        <input type="text" id="productPurchased" placeholder="Product Purchased">
-        <input type="number" id="quantityOrdered" placeholder="Quantity Ordered">
-        <input type="number" id="totalAmount" placeholder="Total Amount">
-
-        <select id="paymentStatus">
-            <option value="">Select Payment Status</option>
-            <option value="Paid">Paid</option>
-            <option value="unPaid">Un Paid</option>
-            <option value="Pending">Pending</option>
-        </select>
-
-        <select id="orderStatus">
-            <option value="">Select Order Status</option>
-            <option value="Processing">Processing</option>
-            <option value="Shipped">Shipped</option>
-            <option value="Delivered">Delivered</option>
-            <option value="Cancelled">Cancelled</option>
-        </select>
-
-        <textarea id="deliveryAddress"
-        placeholder="Delivery Address"></textarea>
-
-        <button type="submit">
-            <i class="fa-solid fa-plus"></i>
-            Order Update
-        </button>
-
+            <input type="text" id="updateCustomerName" placeholder="Customer Name">
+            <input type="number" id="updateMobileNumber" placeholder="Mobile Number">
+            <input type="text" id="updateProductPurchased" placeholder="Product Purchased">
+            <input type="number" id="updateQuantityOrdered" placeholder="Quantity Ordered">
+            <input type="number" id="updateTotalAmount" placeholder="Total Amount">
+            <select id="updatePaymentStatus">
+                <option value="">Select Payment Status</option>
+                <option value="Paid">Paid</option>
+                <option value="un Paid">un Paid</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <select id="updateOrderStatus">
+                <option value="">Select Order Status</option>
+                <option value="Processing">Processing</option>
+                <option value="Shipped">Shipped</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+            <textarea
+            id="updateDeliveryAddress"
+            placeholder="Delivery Address"></textarea>
+            <button type="submit">
+                Order Update
+            </button>
     </form>
 
 </div>
@@ -110,18 +107,18 @@
         <table>
             <thead>
                 <tr>
-                <th>ID</th>
-                <th>customerName</th>
-                <th>mobile</th>
-                <th>product</th>
-                <th>quantity</th>
-                <th>totalAmount</th>
-                <th>address</th>
-                <th>paymentStatus</th>
-                <th>orderStatus</th>
-                <th>createdAt</th>
-                <th>status</th>
-                <th>action</th>
+                    <th>ID</th>
+                    <th>customerName</th>
+                    <th>mobile</th>
+                    <th>product</th>
+                    <th>quantity</th>
+                    <th>totalAmount</th>
+                    <th>address</th>
+                    <th>paymentStatus</th>
+                    <th>orderStatus</th>
+                    <th>createdAt</th>
+                    <th>status</th>
+                    <th>action</th>
                 </tr>
             </thead>
         <tbody id="orderTableBody"></tbody>
@@ -131,13 +128,9 @@
   
     <!-- pagination  -->
     <div id="orderPagination">
-
         <button id="orderPrevBtn">Previous</button>
-
         <div id="orderPageNumbers"></div>
-
         <button id="orderNextBtn">Next</button>
-
     </div>
 
     

@@ -63,13 +63,9 @@ input{
     background-color: rgb(145, 23, 98);
     padding: 20px;
     border-radius: 8px;
-
     display: grid;
-
     grid-template-columns: repeat(2,1fr);
-
     gap: 15px;
-
     margin-bottom: 30px;
 }
 
@@ -79,11 +75,8 @@ input{
 #orderForm select,
 #orderForm textarea{
     padding: 10px;
-
     border: 1px solid #ccc;
-
     border-radius: 5px;
-
     outline: none;
 }
 
@@ -91,9 +84,7 @@ input{
 
 #orderForm textarea{
     grid-column: span 2;
-
     height: 80px;
-
     resize: none;
 }
 
@@ -101,17 +92,11 @@ input{
 
 #orderForm button{
     grid-column: span 2;
-
     padding: 12px;
-
     border: none;
-
     background-color: #0ea5e9;
-
     color: white;
-
     border-radius: 5px;
-
     cursor: pointer;
 }
 
@@ -145,9 +130,7 @@ input{
 
 #updateForm textarea{
     grid-column: span 2;
-
     height: 80px;
-
     resize: none;
 }
 
@@ -155,17 +138,11 @@ input{
 
 #updateForm button{
     grid-column: span 2;
-
     padding: 12px;
-
     border: none;
-
     background-color: #0ea5e9;
-
     color: white;
-
     border-radius: 5px;
-
     cursor: pointer;
 }
 
@@ -180,13 +157,13 @@ input{
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 /* TABLE */
 table{
     width: 100%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     min-width: 1200px;
 }
 
@@ -269,13 +246,9 @@ button:hover{
 
 #orderPagination{
     margin-top: 25px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 10px;
 }
 
@@ -283,15 +256,10 @@ button:hover{
 
 #orderPagination button{
     padding: 10px 15px;
-
     border: none;
-
     background-color: #0ea5e9;
-
     color: white;
-
     border-radius: 5px;
-
     cursor: pointer;
 }
 
@@ -299,12 +267,10 @@ button:hover{
 
 #orderPageNumbers{
     display: flex;
-
     gap: 8px;
 }
 
 /* RESPONSIVE */
-
 @media(max-width:768px){
 
     #orderForm{

@@ -1,8 +1,8 @@
 {
   "products": [
     {
-      "name": "mobile",
-      "brand": "sumsung",
+      "name": "Samsung",
+      "brand": "Samsung",
       "category": "Mobile",
       "price": "20000",
       "quantity": "34",
@@ -19,7 +19,7 @@
       "quantity": "8",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStGUSahbLgsZgDLaqGF2YmZt9ySTcdQ0TWAA&s",
       "description": "Apple iPhone latest model",
-      "status": "In_stock",
+      "status": "Out_of_stock",
       "id": "2"
     },
     {
@@ -30,7 +30,7 @@
       "quantity": "4",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Cjm_XAM_JYfCIpH0TlJ8QWdwUZMdcvuzNw&s",
       "description": "Flagship OnePlus smartphone",
-      "status": "",
+      "status": "Out_of_stock",
       "id": "3"
     },
     {
@@ -52,7 +52,7 @@
       "quantity": "0",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyHyp7X8Mm547iP--BBbAEuJBKEWdTwPl0uA&s",
       "description": "Affordable Realme smartphone",
-      "status": "",
+      "status": "In_stock",
       "id": "5"
     },
     {
@@ -241,32 +241,31 @@
       "description": "Apple iPhone latest model",
       "status": "In_stock",
       "id": "2"
+    },
+    {
+      "name": "Hp vectus",
+      "brand": "HP",
+      "category": "Laptop",
+      "price": "50000",
+      "quantity": "2",
+      "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/d/3/f/-original-imahjxbgqmjfk5st.jpeg?q=70",
+      "description": "HP Victus (i7 14th Gen) Intel Core 7 240H - (24 GB/1 TB SSD/Windows 11 H",
+      "status": "In_stock",
+      "id": "dKNZLefhgtk"
     }
   ],
   "orders": [
     {
-      "id": "1",
-      "customerName": "Rahul Sharma",
-      "mobile": "9876543210",
-      "product": "Samsung Galaxy S24",
-      "quantity": 1,
-      "totalAmount": 74999,
-      "address": "Nagpur, Maharashtra",
-      "paymentStatus": "Paid",
-      "orderStatus": "Delivered",
-      "createdAt": "2025-05-01"
-    },
-    {
-      "id": "2",
       "customerName": "Priya Verma",
       "mobile": "9876501234",
       "product": "iPhone 15",
-      "quantity": 1,
-      "totalAmount": 79999,
-      "address": "Pune, Maharashtra",
-      "paymentStatus": "Paid",
+      "quantity": "1",
+      "totalAmount": "79999",
+      "paymentStatus": "Pending",
       "orderStatus": "Shipped",
-      "createdAt": "2025-05-02"
+      "address": "Pune, Maharashtra",
+      "createdAt": "14/05/2026",
+      "id": "2"
     },
     {
       "id": "3",
@@ -281,16 +280,16 @@
       "createdAt": "2025-05-03"
     },
     {
-      "id": "4",
       "customerName": "Sneha Patil",
       "mobile": "9123456789",
       "product": "Boat Rockerz 450",
-      "quantity": 3,
-      "totalAmount": 4497,
-      "address": "Nagpur, Maharashtra",
+      "quantity": "3",
+      "totalAmount": "4497",
       "paymentStatus": "Paid",
-      "orderStatus": "Delivered",
-      "createdAt": "2025-05-04"
+      "orderStatus": "Cancelled",
+      "address": "Nagpur, Maharashtra",
+      "createdAt": "14/05/2026",
+      "id": "4"
     },
     {
       "id": "5",
@@ -363,6 +362,30 @@
       "paymentStatus": "Paid",
       "orderStatus": "Delivered",
       "createdAt": "2025-05-10"
+    },
+    {
+      "customerName": "Alpesh Sorte",
+      "mobile": "789562545",
+      "product": "apple mobile",
+      "quantity": "2",
+      "totalAmount": "567894",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "address": "Nagpur, Maharastra",
+      "createdAt": "14/05/2026",
+      "id": "MWYtTWVaTL0"
+    },
+    {
+      "customerName": "sanket dada",
+      "mobile": "45682536985",
+      "product": "tablet",
+      "quantity": "3",
+      "totalAmount": "355765",
+      "paymentStatus": "Paid",
+      "orderStatus": "Delivered",
+      "address": "Mumbai, Maharastra",
+      "createdAt": "14/05/2026",
+      "id": "hMSKqv1vRSw"
     }
   ],
   "categories": [

@@ -45,64 +45,42 @@ async function product_post(data) {
 }
 
 async function getproduct() {
-
     try {
-
         let response = await fetch(`http://localhost:3000/products`)
-
         let res = await response.json()
-
         displayCards(res)
-
     } catch (error) {
-
         console.log("Error in get product")
     }
 }
 getproduct()
 
-
 function displayCards(arr) {
-
     let container = document.getElementById("productContainer")
-
     container.innerHTML = ""
-
     arr.forEach((el) => {
-
         let card = document.createElement("div")
         card.classList.add("card")
-
         let image = document.createElement("img")
         image.src = el.image
-
         let cardContent = document.createElement("div")
         cardContent.classList.add("cardContent")
-
         let name = document.createElement("h2")
         name.textContent = `Name : ${el.name}`
-
         let brand = document.createElement("h3")
         brand.textContent = `Brand : ${el.brand}`
-
         let category = document.createElement("h3")
         category.textContent = `Category : ${el.category}`
-
         let price = document.createElement("h4")
         price.textContent = `Price : ₹${el.price}`
-
         let quantity = document.createElement("h4")
         quantity.textContent = `Quantity : ${el.quantity}`
-
         let description = document.createElement("p")
         description.textContent = el.description
-
         let status = document.createElement("h4")
         status.textContent = el.status
-
         let buttonBox = document.createElement("div")
         buttonBox.classList.add("buttonBox")
-
         let editBtn = document.createElement("button")
         editBtn.textContent = "Edit"
         editBtn.classList.add("editBtn")
@@ -114,7 +92,8 @@ function displayCards(arr) {
         // edit functionalty create is below
          editBtn.addEventListener("click", () => {
 
-            document.getElementById("product_id").value = el.id
+            let editid=document.getElementById("product_id")
+            editid.value=el.id
 
             document.getElementById("update_name").value = el.name
 
@@ -167,15 +146,11 @@ function displayCards(arr) {
 }
 
 let productupdate = document.getElementById("productupdate")
-
 productupdate.addEventListener("submit", updateproduct)
 
 async function updateproduct(event) {
-
     event.preventDefault()
-
     let product_id = document.getElementById("product_id").value
-
     let name = document.getElementById("update_name").value
     let brand = document.getElementById("update_brand").value
     let category = document.getElementById("update_category").value
@@ -195,33 +170,20 @@ async function updateproduct(event) {
         description,
         status
     }
-
     try {
-
         await fetch(`http://localhost:3000/products/${product_id}`, {
-
             method: "PUT",
-
             body: JSON.stringify(obj),
-
             headers: {
                 "Content-Type": "application/json"
             }
-
         })
-
         alert("Product Updated Successfully")
-
         getproduct()
-
         productupdate.reset()
-
     } catch (error) {
-
         console.log("Something went wrong in update")
-
     }
-
 }
 
     //    let del_id=document.getElementById("del_id")
@@ -245,59 +207,50 @@ async function updateproduct(event) {
 
 //   final code of searcing the product 
 
-// let select = document.getElementById("type")
+let select = document.getElementById("type")
 
-// let productsearch = document.getElementById("productsearch")
+let productsearch = document.getElementById("productsearch")
 
-// let search_Btn = document.getElementById("search_Btn")
+let search_Btn = document.getElementById("search_Btn")
 
-// let container = document.getElementById("productContainer")
+let container = document.getElementById("productContainer")
 
-// // SEARCH BUTTON
 
-// search_Btn.addEventListener("click", dosearch)
+search_Btn.addEventListener("click", dosearch)
+async function dosearch() {
+    try {
+        let select_val = select.value.trim()
+        let product_val = productsearch.value.trim().toLowerCase()
+        let response = await fetch("http://localhost:3000/products")
+        let actualData = await response.json()
 
-// // SEARCH FUNCTION
+        console.log(actualData)
 
-// async function dosearch() {
+        let filteredData = actualData.filter((el) => {
+            if(!el[select_val]){
 
-//     try {
+                return false
+            }
 
-//         let select_val = select.value.trim()
+            return el[select_val]
+            .toString()
+            .toLowerCase()
+            .includes(product_val)
 
-//         let product_val = productsearch.value.trim().toLowerCase()
+        })
 
-//         let response = await fetch("http://localhost:3000/products")
-//         let actualData = await response.json()
-
-//         console.log(actualData)
-
-//         let filteredData = actualData.filter((el) => {
-
-//             if(!el[select_val]){
-
-//                 return false
-//             }
-
-//             return el[select_val]
-//             .toString()
-//             .toLowerCase()
-//             .includes(product_val)
-
-//         })
-
-//         container.innerHTML = ""
-//         if(filteredData.length === 0){
-//             container.innerHTML = "<h1>No Product Found</h1>"
-//             return
-//         }
-//         mapdata(filteredData)
-//     }
-//     catch(error){
-//         console.log(error)
-//         alert("Search Error")
-//     }
-// }
+        container.innerHTML = ""
+        if(filteredData.length === 0){
+            container.innerHTML = "<h1>No Product Found</h1>"
+            return
+        }
+        displayCards(filteredData)
+    }
+    catch(error){
+        console.log(error)
+        alert("Search Error")
+    }
+}
 
 // Category 
 // let category = document.getElementById("Category");
@@ -317,7 +270,7 @@ async function updateproduct(event) {
 
 //    final code of category
 
-/*
+
 let category = document.getElementById("Category");
 category.addEventListener("change", getData);
 async function getData(arr) { 
@@ -332,11 +285,9 @@ async function getData(arr) {
     displayCards(data);
 }
 getData();
-*/
-
 
 // final code for price sort
-/*
+
 let pricerange = document.getElementById("price");
 pricerange.addEventListener("change", dosort);
 
@@ -365,10 +316,10 @@ async function dosort() {
     }
 }
 dosort();
-*/
+
   
 // final code for stock chack  
-/*
+
 let stock = document.getElementById("Stock");
 stock.addEventListener("change", dofilterstock);
 
@@ -389,11 +340,9 @@ async function dofilterstock() {
     }
 }
 dofilterstock();
-*/
-
 
 // final code of the brand 
-/*
+
 let brand=document.getElementById("brand")
 brand.addEventListener("click", dofilterbrand)
 
@@ -415,45 +364,85 @@ async function dofilterbrand(){
         alert("error in filter data")
     }
 }
-*/
 
 // final code for sorting but not work
-/*
+
+// let sorting = document.getElementById("sorting");
+// sorting.addEventListener("change", dosorting);
+
+// async function dosorting() {
+//     try {
+//         let sorting_val = sorting.value;
+//         let url = "http://localhost:3000/products";
+//         // Price Low to High
+//         if (sorting_val === "price-asc") {
+//             url = `http://localhost:3000/products?_sort=price&_order=asc`;
+//         }
+//         // Price High to Low
+//         else if (sorting_val === "price-desc") {
+//             url = `http://localhost:3000/products?_sort=price&_order=desc`;
+//         }
+//         // Name A-Z
+//         else if (sorting_val === "name-asc") {
+//             url = `http://localhost:3000/products?_sort=name&_order=asc`;
+//         }
+//         // Name Z-A
+//         else if (sorting_val === "name-desc") {
+//             url = `http://localhost:3000/products?_sort=name&_order=desc`;
+//         }
+//         let res = await fetch(url);
+//         let data = await res.json();
+//         displayCards(data);
+//     } 
+   
+//     catch(error) {
+//        alert("error in the sorting part");
+//     }
+// }
+// dosorting();
+
 let sorting = document.getElementById("sorting");
 sorting.addEventListener("change", dosorting);
 
+// fetch data
 async function dosorting() {
     try {
+        let res = await fetch("http://localhost:3000/products");
+        let data = await res.json();
         let sorting_val = sorting.value;
-        let url = "http://localhost:3000/products";
+
         // Price Low to High
-        if (sorting_val === "price-asc") {
-            url = `http://localhost:3000/products?_sort=price&_order=asc`;
+        if (sorting_val == "price-asc") {
+            data.sort((a, b) => {
+                return Number(a.price) - Number(b.price);
+            });
         }
         // Price High to Low
-        else if (sorting_val === "price-desc") {
-            url = `http://localhost:3000/products?_sort=price&_order=desc`;
+        else if (sorting_val == "price-desc") {
+            data.sort((a, b) => {
+                return Number(b.price) - Number(a.price);
+            });
         }
         // Name A-Z
-        else if (sorting_val === "name-asc") {
-            url = `http://localhost:3000/products?_sort=name&_order=asc`;
+        else if (sorting_val == "name-asc") {
+            data.sort((a, b) => {
+                return a.name.localeCompare(b.name);
+            });
         }
         // Name Z-A
-        else if (sorting_val === "name-desc") {
-            url = `http://localhost:3000/products?_sort=name&_order=desc`;
+        else if (sorting_val == "name-desc") {
+            data.sort((a, b) => {
+                return b.name.localeCompare(a.name);
+            });
         }
-        let res = await fetch(url);
-        let data = await res.json();
         displayCards(data);
     } 
-   
     catch(error) {
-       alert("error in the sorting part");
+
+        alert("sorting error");
     }
 }
 dosorting();
-
-*/
 
 //  final code pagination  
 
@@ -463,34 +452,26 @@ let prevBtn = document.getElementById("prevBtn");
 let nextBtn = document.getElementById("nextBtn");
 
 // fetch data
-async function getData() {
-
+async function pageData() {
     try {
-
         let res = await fetch(
             `http://localhost:3000/products?_page=${currentPage}&_per_page=${limit}`
         );
-
         let data = await res.json();
-
         // json-server pagination data
         displayCards(data.data);
-
-    } 
-    
+    }    
     catch(error) {
-
         alert("error in pagination");
     }
 }
-
-getData();
+pageData();
 
 nextBtn.addEventListener("click", () => {
 
     currentPage++;
 
-    getData();
+    pageData();
 });
 
 prevBtn.addEventListener("click", () => {
@@ -499,7 +480,7 @@ prevBtn.addEventListener("click", () => {
 
         currentPage--;
 
-        getData();
+        pageData();
     }
 });
 
